@@ -19,8 +19,11 @@ body#tinymce.wp-editor {
 	// normalize: http://necolas.github.io/normalize.css/
 	@import "partials/normalize";
 
-	// Sass variables
-	@import "partials/variables";
+	// Sass colors
+	@import "partials/colors";
+	
+	// Breakpoints
+	@import "partials/breakpoints";
 
 	// typography
 	@import "partials/typography";

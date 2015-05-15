@@ -2,9 +2,12 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+				<div id="inner-content" class="cf container">
 
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+					<div class="row">
+
+						<main id="main" class="col-xs-12 col-md-8 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+							
 						<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -66,6 +69,8 @@
 						</main>
 
 							<?php get_sidebar(); ?>
+							
+						</div>
 
 					</div>
 

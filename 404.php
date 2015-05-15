@@ -2,9 +2,11 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+				<div id="inner-content" class="cf container">
 
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<div class="row">
+
+						<main id="main" class="col-xs-12 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 						<article id="post-not-found" class="hentry cf">
 
@@ -20,7 +22,7 @@
 
 							</section>
 
-							<section class="search">
+							<section class="search entry-content">
 
 									<p><?php get_search_form(); ?></p>
 
@@ -35,6 +37,8 @@
 						</article>
 
 					</main>
+					
+				</div>
 
 				</div>
 

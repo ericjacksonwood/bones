@@ -5,14 +5,14 @@ URL: http://themble.com/bones/
 
 This is where you can drop your custom functions or
 just edit things like thumbnail sizes, header images,
-sidebars, comments, etc.
+sidebars, comments, ect.
 */
 
 // LOAD BONES CORE (if you remove this, the theme will break)
 require_once( 'library/bones.php' );
 
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
-require_once( 'library/admin.php' );
+// require_once( 'library/admin.php' );
 
 /*********************
 LAUNCH BONES
@@ -67,7 +67,7 @@ add_action( 'after_setup_theme', 'bones_ahoy' );
 /************* OEMBED SIZE OPTIONS *************/
 
 if ( ! isset( $content_width ) ) {
-	$content_width = 680;
+	$content_width = 640;
 }
 
 /************* THUMBNAIL SIZE OPTIONS *************/
@@ -112,6 +112,8 @@ when you add media to your content blocks. If you add more image sizes,
 duplicate one of the lines in the array and name it according to your
 new image size.
 */
+
+
 
 /************* THEME CUSTOMIZE *********************/
 
@@ -243,5 +245,7 @@ function bones_fonts() {
 }
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
+
+
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

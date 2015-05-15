@@ -16,9 +16,11 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+				<div id="inner-content" class="cf container">
 
-						<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<div class="row">
+
+							<main id="main" class="col-xs-12 col-md-8 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<h1 class="archive-title h2"><span><?php _e( 'Posts Categorized:', 'bonestheme' ); ?></span> <?php single_cat_title(); ?></h1>
 
@@ -69,6 +71,8 @@
 						</main>
 
 						<?php get_sidebar(); ?>
+						
+					</div>
 
 				</div>
 

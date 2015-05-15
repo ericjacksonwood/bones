@@ -2,9 +2,9 @@
 					
 					<div class="sidebar">
 
-					<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
+					<?php if ( is_active_sidebar( 'woocommerce' ) ) : ?>
 
-						<?php dynamic_sidebar( 'sidebar1' ); ?>
+						<?php dynamic_sidebar( 'woocommerce' ); ?>
 
 					<?php else : ?>
 

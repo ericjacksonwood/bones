@@ -100,7 +100,7 @@ a {
  * Address `outline` inconsistency between Chrome and other browsers.
  */
 a:focus {
-  outline: thin dotted; }
+  outline: none; }
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
@@ -441,24 +441,27 @@ span.amp {
 Site Name:
 Author:
 
-Stylesheet: Variables
+Stylesheet: Colors
 
-Here is where we declare all our variables like colors, fonts,
-base values, and defaults. We want to make sure this file ONLY
-contains variables that way our files don't get all messy.
-No one likes a mess.
+Here is where we declare all our color variables.
 
 ******************************************************************/
 /*********************
-COLORS
-Need help w/ choosing your colors? Try this site out:
-http://0to255.com/
+COLORS - Need help w/ choosing your colors? Try this site out: http://0to255.com/
 *********************/
-/*
-Here's a great tutorial on how to
-use color variables properly:
-http://sachagreif.com/sass-color-variables/
-*/
+/* Here's a great tutorial on how to use color variables properly: http://sachagreif.com/sass-color-variables/ */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Breakpoints
+
+Here is where we declare all our breakpoints.
+
+******************************************************************/
+/*********************
+BREAKPOINTS
+*********************/
 /******************************************************************
 Site Name:
 Author:
@@ -510,10 +513,9 @@ some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
 */
 p {
-  -ms-word-break: break-all;
-  -ms-word-wrap: break-all;
+  -ms-word-wrap: break-word;
   word-break: break-word;
-  word-break: break-word;
+  word-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
@@ -619,230 +621,695 @@ Author:
 
 Stylesheet: Grid Stylesheet
 
-I've seperated the grid so you can swap it out easily. It's
-called at the top the style.scss stylesheet.
-
-There are a ton of grid solutions out there. You should definitely
-experiment with your own. Here are some recommendations:
-
-http://gridsetapp.com - Love this site. Responsive Grids made easy.
-http://susy.oddbird.net/ - Grids using Compass. Very elegant.
-http://gridpak.com/ - Create your own responsive grid.
-https://github.com/dope/lemonade - Neat lightweight grid.
-
-
-The grid below is a custom built thingy I modeled a bit after
-Gridset. It's VERY basic and probably shouldn't be used on
-your client projects. The idea is you learn how to roll your
-own grids. It's better in the long run and allows you full control
-over your project's layout.
-
 ******************************************************************/
-.last-col {
-  float: right;
-  padding-right: 0 !important; }
+/*!
+ * Bootstrap v3.3.1 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+/*!
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=0737ec69422b92d13fd0)
+ * Config saved to config.json and https://gist.github.com/0737ec69422b92d13fd0
+ */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 481px) {
+    .container {
+      /* TABLET PORTRAIT */
+      /* NO MAX WIDTH */ } }
+  @media (min-width: 768px) {
+    .container {
+      /* TABLET */
+      max-width: 738px; } }
+  @media (min-width: 1024px) {
+    .container {
+      /* DESKTOP */
+      max-width: 994px; } }
+  @media (min-width: 1230px) {
+    .container {
+      /* LARGE DESKTOP */
+      max-width: 1200px; } }
 
-/*
-Mobile Grid Styles
-These are the widths for the mobile grid.
-There are four types, but you can add or customize
-them however you see fit.
-*/
-@media (max-width: 767px) {
-  .m-all {
-    float: left;
-    padding-right: 0.75em;
-    width: 100%;
-    padding-right: 0; }
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
 
-  .m-1of2 {
-    float: left;
-    padding-right: 0.75em;
-    width: 50%; }
+.row {
+  margin-left: -15px;
+  margin-right: -15px; }
 
-  .m-1of3 {
-    float: left;
-    padding-right: 0.75em;
-    width: 33.33%; }
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
 
-  .m-2of3 {
-    float: left;
-    padding-right: 0.75em;
-    width: 66.66%; }
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  float: left; }
 
-  .m-1of4 {
-    float: left;
-    padding-right: 0.75em;
-    width: 25%; }
+.col-xs-12 {
+  width: 100%; }
 
-  .m-3of4 {
-    float: left;
-    padding-right: 0.75em;
-    width: 75%; } }
-/* Portrait tablet to landscape */
-@media (min-width: 768px) and (max-width: 1029px) {
-  .t-all {
-    float: left;
-    padding-right: 0.75em;
-    width: 100%;
-    padding-right: 0; }
+.col-xs-11 {
+  width: 91.66666667%; }
 
-  .t-1of2 {
-    float: left;
-    padding-right: 0.75em;
-    width: 50%; }
+.col-xs-10 {
+  width: 83.33333333%; }
 
-  .t-1of3 {
-    float: left;
-    padding-right: 0.75em;
-    width: 33.33%; }
+.col-xs-9 {
+  width: 75%; }
 
-  .t-2of3 {
-    float: left;
-    padding-right: 0.75em;
-    width: 66.66%; }
+.col-xs-8 {
+  width: 66.66666667%; }
 
-  .t-1of4 {
-    float: left;
-    padding-right: 0.75em;
-    width: 25%; }
+.col-xs-7 {
+  width: 58.33333333%; }
 
-  .t-3of4 {
-    float: left;
-    padding-right: 0.75em;
+.col-xs-6 {
+  width: 50%; }
+
+.col-xs-5 {
+  width: 41.66666667%; }
+
+.col-xs-4 {
+  width: 33.33333333%; }
+
+.col-xs-3 {
+  width: 25%; }
+
+.col-xs-2 {
+  width: 16.66666667%; }
+
+.col-xs-1 {
+  width: 8.33333333%; }
+
+.col-xs-pull-12 {
+  right: 100%; }
+
+.col-xs-pull-11 {
+  right: 91.66666667%; }
+
+.col-xs-pull-10 {
+  right: 83.33333333%; }
+
+.col-xs-pull-9 {
+  right: 75%; }
+
+.col-xs-pull-8 {
+  right: 66.66666667%; }
+
+.col-xs-pull-7 {
+  right: 58.33333333%; }
+
+.col-xs-pull-6 {
+  right: 50%; }
+
+.col-xs-pull-5 {
+  right: 41.66666667%; }
+
+.col-xs-pull-4 {
+  right: 33.33333333%; }
+
+.col-xs-pull-3 {
+  right: 25%; }
+
+.col-xs-pull-2 {
+  right: 16.66666667%; }
+
+.col-xs-pull-1 {
+  right: 8.33333333%; }
+
+.col-xs-pull-0 {
+  right: auto; }
+
+.col-xs-push-12 {
+  left: 100%; }
+
+.col-xs-push-11 {
+  left: 91.66666667%; }
+
+.col-xs-push-10 {
+  left: 83.33333333%; }
+
+.col-xs-push-9 {
+  left: 75%; }
+
+.col-xs-push-8 {
+  left: 66.66666667%; }
+
+.col-xs-push-7 {
+  left: 58.33333333%; }
+
+.col-xs-push-6 {
+  left: 50%; }
+
+.col-xs-push-5 {
+  left: 41.66666667%; }
+
+.col-xs-push-4 {
+  left: 33.33333333%; }
+
+.col-xs-push-3 {
+  left: 25%; }
+
+.col-xs-push-2 {
+  left: 16.66666667%; }
+
+.col-xs-push-1 {
+  left: 8.33333333%; }
+
+.col-xs-push-0 {
+  left: auto; }
+
+.col-xs-offset-12 {
+  margin-left: 100%; }
+
+.col-xs-offset-11 {
+  margin-left: 91.66666667%; }
+
+.col-xs-offset-10 {
+  margin-left: 83.33333333%; }
+
+.col-xs-offset-9 {
+  margin-left: 75%; }
+
+.col-xs-offset-8 {
+  margin-left: 66.66666667%; }
+
+.col-xs-offset-7 {
+  margin-left: 58.33333333%; }
+
+.col-xs-offset-6 {
+  margin-left: 50%; }
+
+.col-xs-offset-5 {
+  margin-left: 41.66666667%; }
+
+.col-xs-offset-4 {
+  margin-left: 33.33333333%; }
+
+.col-xs-offset-3 {
+  margin-left: 25%; }
+
+.col-xs-offset-2 {
+  margin-left: 16.66666667%; }
+
+.col-xs-offset-1 {
+  margin-left: 8.33333333%; }
+
+.col-xs-offset-0 {
+  margin-left: 0%; }
+
+@media (min-width: 768px) {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: left; }
+
+  .col-sm-12 {
+    width: 100%; }
+
+  .col-sm-11 {
+    width: 91.66666667%; }
+
+  .col-sm-10 {
+    width: 83.33333333%; }
+
+  .col-sm-9 {
     width: 75%; }
 
-  .t-1of5 {
-    float: left;
-    padding-right: 0.75em;
-    width: 20%; }
+  .col-sm-8 {
+    width: 66.66666667%; }
 
-  .t-2of5 {
-    float: left;
-    padding-right: 0.75em;
-    width: 40%; }
+  .col-sm-7 {
+    width: 58.33333333%; }
 
-  .t-3of5 {
-    float: left;
-    padding-right: 0.75em;
-    width: 60%; }
-
-  .t-4of5 {
-    float: left;
-    padding-right: 0.75em;
-    width: 80%; } }
-/* Landscape to small desktop */
-@media (min-width: 1030px) {
-  .d-all {
-    float: left;
-    padding-right: 0.75em;
-    width: 100%;
-    padding-right: 0; }
-
-  .d-1of2 {
-    float: left;
-    padding-right: 0.75em;
+  .col-sm-6 {
     width: 50%; }
 
-  .d-1of3 {
-    float: left;
-    padding-right: 0.75em;
-    width: 33.33%; }
+  .col-sm-5 {
+    width: 41.66666667%; }
 
-  .d-2of3 {
-    float: left;
-    padding-right: 0.75em;
-    width: 66.66%; }
+  .col-sm-4 {
+    width: 33.33333333%; }
 
-  .d-1of4 {
-    float: left;
-    padding-right: 0.75em;
+  .col-sm-3 {
     width: 25%; }
 
-  .d-3of4 {
-    float: left;
-    padding-right: 0.75em;
+  .col-sm-2 {
+    width: 16.66666667%; }
+
+  .col-sm-1 {
+    width: 8.33333333%; }
+
+  .col-sm-pull-12 {
+    right: 100%; }
+
+  .col-sm-pull-11 {
+    right: 91.66666667%; }
+
+  .col-sm-pull-10 {
+    right: 83.33333333%; }
+
+  .col-sm-pull-9 {
+    right: 75%; }
+
+  .col-sm-pull-8 {
+    right: 66.66666667%; }
+
+  .col-sm-pull-7 {
+    right: 58.33333333%; }
+
+  .col-sm-pull-6 {
+    right: 50%; }
+
+  .col-sm-pull-5 {
+    right: 41.66666667%; }
+
+  .col-sm-pull-4 {
+    right: 33.33333333%; }
+
+  .col-sm-pull-3 {
+    right: 25%; }
+
+  .col-sm-pull-2 {
+    right: 16.66666667%; }
+
+  .col-sm-pull-1 {
+    right: 8.33333333%; }
+
+  .col-sm-pull-0 {
+    right: auto; }
+
+  .col-sm-push-12 {
+    left: 100%; }
+
+  .col-sm-push-11 {
+    left: 91.66666667%; }
+
+  .col-sm-push-10 {
+    left: 83.33333333%; }
+
+  .col-sm-push-9 {
+    left: 75%; }
+
+  .col-sm-push-8 {
+    left: 66.66666667%; }
+
+  .col-sm-push-7 {
+    left: 58.33333333%; }
+
+  .col-sm-push-6 {
+    left: 50%; }
+
+  .col-sm-push-5 {
+    left: 41.66666667%; }
+
+  .col-sm-push-4 {
+    left: 33.33333333%; }
+
+  .col-sm-push-3 {
+    left: 25%; }
+
+  .col-sm-push-2 {
+    left: 16.66666667%; }
+
+  .col-sm-push-1 {
+    left: 8.33333333%; }
+
+  .col-sm-push-0 {
+    left: auto; }
+
+  .col-sm-offset-12 {
+    margin-left: 100%; }
+
+  .col-sm-offset-11 {
+    margin-left: 91.66666667%; }
+
+  .col-sm-offset-10 {
+    margin-left: 83.33333333%; }
+
+  .col-sm-offset-9 {
+    margin-left: 75%; }
+
+  .col-sm-offset-8 {
+    margin-left: 66.66666667%; }
+
+  .col-sm-offset-7 {
+    margin-left: 58.33333333%; }
+
+  .col-sm-offset-6 {
+    margin-left: 50%; }
+
+  .col-sm-offset-5 {
+    margin-left: 41.66666667%; }
+
+  .col-sm-offset-4 {
+    margin-left: 33.33333333%; }
+
+  .col-sm-offset-3 {
+    margin-left: 25%; }
+
+  .col-sm-offset-2 {
+    margin-left: 16.66666667%; }
+
+  .col-sm-offset-1 {
+    margin-left: 8.33333333%; }
+
+  .col-sm-offset-0 {
+    margin-left: 0%; } }
+@media (min-width: 1024px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left; }
+
+  .col-md-12 {
+    width: 100%; }
+
+  .col-md-11 {
+    width: 91.66666667%; }
+
+  .col-md-10 {
+    width: 83.33333333%; }
+
+  .col-md-9 {
     width: 75%; }
 
-  .d-1of5 {
-    float: left;
-    padding-right: 0.75em;
-    width: 20%; }
+  .col-md-8 {
+    width: 66.66666667%; }
 
-  .d-2of5 {
-    float: left;
-    padding-right: 0.75em;
-    width: 40%; }
+  .col-md-7 {
+    width: 58.33333333%; }
 
-  .d-3of5 {
-    float: left;
-    padding-right: 0.75em;
-    width: 60%; }
+  .col-md-6 {
+    width: 50%; }
 
-  .d-4of5 {
-    float: left;
-    padding-right: 0.75em;
-    width: 80%; }
+  .col-md-5 {
+    width: 41.66666667%; }
 
-  .d-1of6 {
-    float: left;
-    padding-right: 0.75em;
-    width: 16.6666666667%; }
+  .col-md-4 {
+    width: 33.33333333%; }
 
-  .d-1of7 {
-    float: left;
-    padding-right: 0.75em;
-    width: 14.2857142857%; }
+  .col-md-3 {
+    width: 25%; }
 
-  .d-2of7 {
-    float: left;
-    padding-right: 0.75em;
-    width: 28.5714286%; }
+  .col-md-2 {
+    width: 16.66666667%; }
 
-  .d-3of7 {
-    float: left;
-    padding-right: 0.75em;
-    width: 42.8571429%; }
+  .col-md-1 {
+    width: 8.33333333%; }
 
-  .d-4of7 {
-    float: left;
-    padding-right: 0.75em;
-    width: 57.1428572%; }
+  .col-md-pull-12 {
+    right: 100%; }
 
-  .d-5of7 {
-    float: left;
-    padding-right: 0.75em;
-    width: 71.4285715%; }
+  .col-md-pull-11 {
+    right: 91.66666667%; }
 
-  .d-6of7 {
-    float: left;
-    padding-right: 0.75em;
-    width: 85.7142857%; }
+  .col-md-pull-10 {
+    right: 83.33333333%; }
 
-  .d-1of8 {
-    float: left;
-    padding-right: 0.75em;
-    width: 12.5%; }
+  .col-md-pull-9 {
+    right: 75%; }
 
-  .d-1of9 {
-    float: left;
-    padding-right: 0.75em;
-    width: 11.1111111111%; }
+  .col-md-pull-8 {
+    right: 66.66666667%; }
 
-  .d-1of10 {
-    float: left;
-    padding-right: 0.75em;
-    width: 10%; }
+  .col-md-pull-7 {
+    right: 58.33333333%; }
 
-  .d-1of11 {
-    float: left;
-    padding-right: 0.75em;
-    width: 9.09090909091%; }
+  .col-md-pull-6 {
+    right: 50%; }
 
-  .d-1of12 {
-    float: left;
-    padding-right: 0.75em;
-    width: 8.33%; } }
+  .col-md-pull-5 {
+    right: 41.66666667%; }
+
+  .col-md-pull-4 {
+    right: 33.33333333%; }
+
+  .col-md-pull-3 {
+    right: 25%; }
+
+  .col-md-pull-2 {
+    right: 16.66666667%; }
+
+  .col-md-pull-1 {
+    right: 8.33333333%; }
+
+  .col-md-pull-0 {
+    right: auto; }
+
+  .col-md-push-12 {
+    left: 100%; }
+
+  .col-md-push-11 {
+    left: 91.66666667%; }
+
+  .col-md-push-10 {
+    left: 83.33333333%; }
+
+  .col-md-push-9 {
+    left: 75%; }
+
+  .col-md-push-8 {
+    left: 66.66666667%; }
+
+  .col-md-push-7 {
+    left: 58.33333333%; }
+
+  .col-md-push-6 {
+    left: 50%; }
+
+  .col-md-push-5 {
+    left: 41.66666667%; }
+
+  .col-md-push-4 {
+    left: 33.33333333%; }
+
+  .col-md-push-3 {
+    left: 25%; }
+
+  .col-md-push-2 {
+    left: 16.66666667%; }
+
+  .col-md-push-1 {
+    left: 8.33333333%; }
+
+  .col-md-push-0 {
+    left: auto; }
+
+  .col-md-offset-12 {
+    margin-left: 100%; }
+
+  .col-md-offset-11 {
+    margin-left: 91.66666667%; }
+
+  .col-md-offset-10 {
+    margin-left: 83.33333333%; }
+
+  .col-md-offset-9 {
+    margin-left: 75%; }
+
+  .col-md-offset-8 {
+    margin-left: 66.66666667%; }
+
+  .col-md-offset-7 {
+    margin-left: 58.33333333%; }
+
+  .col-md-offset-6 {
+    margin-left: 50%; }
+
+  .col-md-offset-5 {
+    margin-left: 41.66666667%; }
+
+  .col-md-offset-4 {
+    margin-left: 33.33333333%; }
+
+  .col-md-offset-3 {
+    margin-left: 25%; }
+
+  .col-md-offset-2 {
+    margin-left: 16.66666667%; }
+
+  .col-md-offset-1 {
+    margin-left: 8.33333333%; }
+
+  .col-md-offset-0 {
+    margin-left: 0%; } }
+@media (min-width: 1230px) {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: left; }
+
+  .col-lg-12 {
+    width: 100%; }
+
+  .col-lg-11 {
+    width: 91.66666667%; }
+
+  .col-lg-10 {
+    width: 83.33333333%; }
+
+  .col-lg-9 {
+    width: 75%; }
+
+  .col-lg-8 {
+    width: 66.66666667%; }
+
+  .col-lg-7 {
+    width: 58.33333333%; }
+
+  .col-lg-6 {
+    width: 50%; }
+
+  .col-lg-5 {
+    width: 41.66666667%; }
+
+  .col-lg-4 {
+    width: 33.33333333%; }
+
+  .col-lg-3 {
+    width: 25%; }
+
+  .col-lg-2 {
+    width: 16.66666667%; }
+
+  .col-lg-1 {
+    width: 8.33333333%; }
+
+  .col-lg-pull-12 {
+    right: 100%; }
+
+  .col-lg-pull-11 {
+    right: 91.66666667%; }
+
+  .col-lg-pull-10 {
+    right: 83.33333333%; }
+
+  .col-lg-pull-9 {
+    right: 75%; }
+
+  .col-lg-pull-8 {
+    right: 66.66666667%; }
+
+  .col-lg-pull-7 {
+    right: 58.33333333%; }
+
+  .col-lg-pull-6 {
+    right: 50%; }
+
+  .col-lg-pull-5 {
+    right: 41.66666667%; }
+
+  .col-lg-pull-4 {
+    right: 33.33333333%; }
+
+  .col-lg-pull-3 {
+    right: 25%; }
+
+  .col-lg-pull-2 {
+    right: 16.66666667%; }
+
+  .col-lg-pull-1 {
+    right: 8.33333333%; }
+
+  .col-lg-pull-0 {
+    right: auto; }
+
+  .col-lg-push-12 {
+    left: 100%; }
+
+  .col-lg-push-11 {
+    left: 91.66666667%; }
+
+  .col-lg-push-10 {
+    left: 83.33333333%; }
+
+  .col-lg-push-9 {
+    left: 75%; }
+
+  .col-lg-push-8 {
+    left: 66.66666667%; }
+
+  .col-lg-push-7 {
+    left: 58.33333333%; }
+
+  .col-lg-push-6 {
+    left: 50%; }
+
+  .col-lg-push-5 {
+    left: 41.66666667%; }
+
+  .col-lg-push-4 {
+    left: 33.33333333%; }
+
+  .col-lg-push-3 {
+    left: 25%; }
+
+  .col-lg-push-2 {
+    left: 16.66666667%; }
+
+  .col-lg-push-1 {
+    left: 8.33333333%; }
+
+  .col-lg-push-0 {
+    left: auto; }
+
+  .col-lg-offset-12 {
+    margin-left: 100%; }
+
+  .col-lg-offset-11 {
+    margin-left: 91.66666667%; }
+
+  .col-lg-offset-10 {
+    margin-left: 83.33333333%; }
+
+  .col-lg-offset-9 {
+    margin-left: 75%; }
+
+  .col-lg-offset-8 {
+    margin-left: 66.66666667%; }
+
+  .col-lg-offset-7 {
+    margin-left: 58.33333333%; }
+
+  .col-lg-offset-6 {
+    margin-left: 50%; }
+
+  .col-lg-offset-5 {
+    margin-left: 41.66666667%; }
+
+  .col-lg-offset-4 {
+    margin-left: 33.33333333%; }
+
+  .col-lg-offset-3 {
+    margin-left: 25%; }
+
+  .col-lg-offset-2 {
+    margin-left: 16.66666667%; }
+
+  .col-lg-offset-1 {
+    margin-left: 8.33333333%; }
+
+  .col-lg-offset-0 {
+    margin-left: 0%; } }
+.clearfix:before,
+.clearfix:after,
+.container:before,
+.container:after,
+.container-fluid:before,
+.container-fluid:after,
+.row:before,
+.row:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after,
+.container:after,
+.container-fluid:after,
+.row:after {
+  clear: both; }
+
 /*********************
 IMPORTING MODULES
 Modules are reusable blocks or elements we use throughout the project.
@@ -910,7 +1377,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   position: relative;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
-  color: white;
+  color: #fff;
   font-size: 0.9em;
   font-size: 34px;
   line-height: 34px;
@@ -922,7 +1389,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   -webkit-transition: background-color 0.14s ease-in-out;
   transition: background-color 0.14s ease-in-out; }
   .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
-    color: white;
+    color: #fff;
     text-decoration: none; }
   .blue-btn:active, .comment-reply-link:active, #submit:active {
     top: 1px; }
@@ -1026,7 +1493,8 @@ textarea,
   textarea:active,
   .field:focus,
   .field:active {
-    background-color: #f7f8fa; }
+    background-color: #f7f8fa;
+    outline: none; }
   input[type="text"].error, input[type="text"].is-invalid,
   input[type="password"].error,
   input[type="password"].is-invalid,
@@ -1062,7 +1530,7 @@ textarea,
   .field.is-invalid {
     color: #fbe3e4;
     border-color: #fbe3e4;
-    background-color: white;
+    background-color: #fff;
     background-position: 99% center;
     background-repeat: no-repeat;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDREQkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDREQ0YwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ3ODRGRkE2RjA0QTExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERBRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+U8iT5wAAAedJREFUeNqk1U9I02Ecx/HtV3aIFAc1hcRDUoGXRAq0oNLA2CrsEFmHbikZu0iQYIFGYAiegkCpLipBxPpDEBMUzB0EhSG2LhG7hMR2GviPgUTvB57Bw8P3+U23B16HPX8+e/b8nt93wezZSMCnhXETF3AcB5BDCnH8Dq98ExcGHcFn8Ah3cdDni+fxnPDv9oAnTB7CKu6VCFXtChZy56LxUjt+jfuB8toSOth9wd7xWAWhqrUjYR/FRTwWJm+iIPT/w7bQf5ljiZnBg45dtKFX6H+LU8gIY8OEV6vgTkStwXWE8BPTGDHGPqNPz2mCfSOOYkA99TvCt1bhGPL68zMcwmncMuape10jrI+q4BbHi/FLn31S9z2x5tRhTc+1W506ipM+T3oRD4X+8+qtc4SqFvL0z/Fr14S+Szjis8bz9Lvvaq8cwS/wwGfdlqfPSWqTiFlX77o13u9Ym1PBs8JAytpRoy44X9Ft9E/gvbA+rYKn8NcaaMVc8UHgBw4b9/iqUQZ6hOAJFbyDcUflmsEX4a6+wTtHGfhAIUqa1U29Zc2BytouThD8x6xuN5CtMPi2CrXLZkZf/HyZoRFCP7n+QVR4PV7uI/AjGghN7OU/r1ilnqILtfpNC+o6vIFljBKYlhb/F2AAgaBsWR5wRiIAAAAASUVORK5CYII=);
@@ -1102,7 +1570,7 @@ textarea,
   .field.is-valid {
     color: #e6efc2;
     border-color: #e6efc2;
-    background-color: white;
+    background-color: #fff;
     background-position: 99% center;
     background-repeat: no-repeat;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDRERkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDRFMEYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjY0MzQ0NERERjA0QjExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERFRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+7olkTQAAAfhJREFUeNqklU9oE0EUhzdroWjw0tBeWlDxkEaIp55TsCU9VKIgCrHBelA8CQ1Kr1WPbZrQ3gqtQqvGqxpQc2jBk6BIIaAGD4qNCKURpDSKiPi98gLDsJt//uBjsztvfnk7895sIPAw6/joGMThFJyAXn2+A+9gA57/TaY/eU0OeBgfhGm4DiGnsb7DAszxBz/NAdcKjMJLuNWCqagHbsscN5+L+hmH4QkMOe1L5jzFfNA2PgT34ajTuY7AGuZB0/hmh5m+gS0r8xv1zRvg+gGCHZiOwnF4DP3iB3sQkYxPd2C6CWfhB9Xwlus5+K1j4jXuaq3a+gM1H9OPcAa+7q9lPidZJqHbiIm7Wg22rsEI7FrPSzAMX/T+ADyAKSsu7Fr1KplehLvwCs5DvfBf65p+MypqRbO1FXK9utH4/QKuaqYTsG3E3INJv00Q46px3+XxanJ/Ute2/vqP4FKDza2KcdljIKdnhS0xXYULTaqmLMZFn8FFSFtvt6x70ExFCS5oUXspq2ssa7oEl1swFa+CGFdgtkHgPDyDKy02zyxNU6lXRUZb1EuHYayNNs+Yh5B0WQo+/8fpJnNTZFuzz2OpjoQ2QruSOQlMy35fEGmEGMxY9e1brxobw7TkWA1h6xfckUPb+JhGoE/Hpfvew7qUld/H9J8AAwDpw3WYrxcZ3QAAAABJRU5ErkJggg==);
@@ -1226,21 +1694,13 @@ select {
   background-position: 97.5% center; }
 
 /*********************
-BASE (MOBILE) SIZE
-This are the mobile styles. It's what people see on their phones. If
-you set a great foundation, you won't need to add too many styles in
-the other stylesheets. Remember, keep it light: Speed is Important.
+IMPORTING CUSTOM BLOCKS
 *********************/
 /******************************************************************
 Site Name:
 Author:
 
-Stylesheet: Base Mobile Stylesheet
-
-Be light and don't over style since everything here will be
-loaded by mobile devices. You want to keep it as minimal as
-possible. This is called at the top of the main stylsheet
-and will be used across all viewports.
+Stylesheet: Defaults
 
 ******************************************************************/
 /*********************
@@ -1252,7 +1712,8 @@ body {
   line-height: 1.5;
   color: #5c6b80;
   background-color: #eaedf2;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 /********************
 WORDPRESS BODY CLASSES
@@ -1294,13 +1755,6 @@ style a page via class
 /* paged items like search results or archives */
 /* individual paged (i.e. body.paged-3) */
 /*********************
-LAYOUT & GRID STYLES
-*********************/
-.wrap {
-  width: 96%;
-  margin: 0 auto; }
-
-/*********************
 LINK STYLES
 *********************/
 a, a:visited {
@@ -1308,8 +1762,13 @@ a, a:visited {
   /* on hover */
   /* on click */
   /* mobile tap color */ }
+  @media (min-width: 768px) {
+    a, a:visited {
+      /* TABLET */
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; } }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #d10e3c; }
+    color: #c30d38; }
   a:link, a:visited:link {
     /*
     this highlights links on iPhones/iPads.
@@ -1318,104 +1777,18 @@ a, a:visited {
     */
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
-/******************************************************************
-H1, H2, H3, H4, H5 STYLES
-******************************************************************/
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-  text-rendering: optimizelegibility;
-  font-weight: 500;
-  /*
-  if you're going to use webfonts, be sure to check your weights
-  http://css-tricks.com/watch-your-font-weight/
-  */
-  /* removing text decoration from all headline links */ }
-  h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
-    text-decoration: none; }
-
-h1, .h1 {
-  font-size: 2.5em;
-  line-height: 1.333em; }
-
-h2, .h2 {
-  font-size: 1.75em;
-  line-height: 1.4em;
-  margin-bottom: 0.375em; }
-
-h3, .h3 {
-  font-size: 1.125em; }
-
-h4, .h4 {
-  font-size: 1.1em;
-  font-weight: 700; }
-
-h5, .h5 {
-  font-size: 0.846em;
-  line-height: 2.09em;
-  text-transform: uppercase;
-  letter-spacing: 2px; }
-
-/*********************
-HEADER STYLES
-*********************/
-.header {
-  background-color: #323944; }
-
-#logo {
-  margin: 0.75em 0; }
-  #logo a {
-    color: white; }
-
-/*********************
-NAVIGATION STYLES
-*********************/
-/*
-all navs have a .nav class applied via
-the wp_menu function; this is so we can
-easily write one group of styles for
-the navs on the site so our css is cleaner
-and more scalable.
-*/
-.nav {
-  border-bottom: 0;
-  margin: 0;
-  /* end .menu li */
-  /* highlight current page */
-  /* end current highlighters */ }
-  .nav li {
-    /*
-    so you really have to rethink your dropdowns for mobile.
-    you don't want to have it expand too much because the
-    screen is so small. How you manage your menu should
-    depend on the project. Here's some great info on it:
-    http://www.alistapart.com/articles/organizing-mobile/
-    */ }
-    .nav li a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      padding: 0.75em;
-      /*
-      remember this is for mobile ONLY, so there's no need
-      to even declare hover styles here, you can do it in
-      the style.scss file where it's relevant. We want to
-      keep this file as small as possible!
-      */ }
-    .nav li ul.sub-menu li a,
-    .nav li ul.children li a {
-      padding-left: 30px; }
-
-/* end .nav */
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 #content {
-  margin-top: 1.5em; }
+  /* margin-top: 1.5em; */ }
 
 .hentry {
-  background-color: white;
+  background-color: #fff;
   border-radius: 3px;
   margin-bottom: 1.5em;
-  border: 1px solid #cccccc; }
+  margin-top: 1.5em;
+  border: 1px solid #ccc; }
   .hentry header {
     border-bottom: 1px solid #f8f9fa;
     padding: 1.5em; }
@@ -1430,6 +1803,9 @@ POSTS & CONTENT STYLES
 .page-title,
 .entry-title {
   margin: 0; }
+
+.archive-title {
+  margin-bottom: -0.25em; }
 
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
@@ -1497,6 +1873,25 @@ POSTS & CONTENT STYLES
     margin: 0 0 1.5em 0;
     max-width: 100%;
     height: auto; }
+  @media (min-width: 481px) {
+    .entry-content .alignleft, .entry-content img.alignleft {
+      /* TABLET PORTRAIT */
+      margin-right: 1.5em;
+      display: inline;
+      float: left; } }
+  @media (min-width: 481px) {
+    .entry-content .alignright, .entry-content img.alignright {
+      /* TABLET PORTRAIT */
+      margin-left: 1.5em;
+      display: inline;
+      float: right; } }
+  @media (min-width: 481px) {
+    .entry-content .aligncenter, .entry-content img.aligncenter {
+      /* TABLET PORTRAIT */
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+      clear: both; } }
   .entry-content .size-auto,
   .entry-content .size-full,
   .entry-content .size-large,
@@ -1545,7 +1940,7 @@ PAGE NAVI STYLES
   text-align: center; }
   .pagination ul {
     display: inline-block;
-    background-color: white;
+    background-color: #fff;
     white-space: nowrap;
     padding: 0;
     clear: both;
@@ -1570,12 +1965,12 @@ PAGE NAVI STYLES
     color: #2980b9; }
     .pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
       background-color: #2980b9;
-      color: white; }
+      color: #fff; }
   .pagination .current {
     cursor: default;
     color: #5c6b80; }
     .pagination .current:hover, .pagination .current:focus {
-      background-color: white;
+      background-color: #fff;
       color: #5c6b80; }
 
 /* end .bones_page_navi */
@@ -1586,6 +1981,237 @@ PAGE NAVI STYLES
   float: right; }
 
 /* end .wp-prev-next */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Header
+
+******************************************************************/
+/*********************
+HEADER STYLES
+*********************/
+.header {
+  background-color: #323944; }
+
+#logo {
+  margin: 0.75em 0; }
+  #logo a {
+    color: #fff; }
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Sidebar
+
+******************************************************************/
+/*********************
+SIDEBARS & ASIDES
+*********************/
+.sidebar {
+  background-color: #fff;
+  border-radius: 3px;
+  margin-bottom: 1.5em;
+  margin-top: 0;
+  border: 1px solid #ccc;
+  padding: 0 1.5em; }
+  @media (min-width: 1024px) {
+    .sidebar {
+      /* DESKTOP */
+      margin-top: 1.5em; } }
+
+.widgettitle {
+  border-bottom: 2px solid #444;
+  margin-bottom: 0.75em; }
+
+.widget {
+  margin: 1em 0 2em 0; }
+  .widget ul li {
+    margin-bottom: 0.75em;
+    /* deep nesting */ }
+    .widget ul li ul {
+      margin-top: 0.75em;
+      padding-left: 1em; }
+
+/* links widget */
+/* meta widget */
+/* pages widget */
+/* recent-posts widget */
+/* archives widget */
+/* tag-cloud widget */
+/* calendar widget */
+/* category widget */
+/* recent-comments widget */
+/* search widget */
+/* text widget */
+.no-widgets {
+  background-color: #fff;
+  padding: 1.5em;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  margin-bottom: 1.5em; }
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Navigation
+
+******************************************************************/
+/*********************
+NAVIGATION STYLES
+*********************/
+/*
+all navs have a .nav class applied via
+the wp_menu function; this is so we can
+easily write one group of styles for
+the navs on the site so our css is cleaner
+and more scalable.
+*/
+.nav {
+  border-bottom: 0;
+  margin: 0;
+  /* end .menu li */
+  /* highlight current page */
+  /* end current highlighters */ }
+  @media (min-width: 768px) {
+    .nav {
+      /* TABLET */
+      border: 0; } }
+  @media (min-width: 768px) {
+    .nav ul {
+      /* TABLET */
+      background: #323944;
+      margin-top: 0; } }
+  .nav li {
+    /*
+    so you really have to rethink your dropdowns for mobile.
+    you don't want to have it expand too much because the
+    screen is so small. How you manage your menu should
+    depend on the project. Here's some great info on it:
+    http://www.alistapart.com/articles/organizing-mobile/
+    */
+    /* showing sub-menus */ }
+    @media (min-width: 768px) {
+      .nav li {
+        /* TABLET */
+        float: left;
+        position: relative; } }
+    .nav li a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.75em; }
+      @media (min-width: 768px) {
+        .nav li a {
+          /* TABLET */
+          border-bottom: 0;
+          background: #272d35;
+          margin-right: 1px; }
+          .nav li a:hover, .nav li a:focus {
+            color: #fff;
+            background: #1c2027; } }
+    .nav li ul.sub-menu,
+    .nav li ul.children {
+      /* highlight sub-menu current page */ }
+      @media (min-width: 768px) {
+        .nav li ul.sub-menu,
+        .nav li ul.children {
+          /* TABLET */
+          margin-top: 0;
+          border: 1px solid #ccc;
+          border-top: 0;
+          position: absolute;
+          visibility: hidden;
+          z-index: 8999; } }
+      .nav li ul.sub-menu li a,
+      .nav li ul.children li a {
+        padding-left: 30px; }
+        @media (min-width: 768px) {
+          .nav li ul.sub-menu li a,
+          .nav li ul.children li a {
+            /* TABLET */
+            padding-left: 10px;
+            border-right: 0;
+            display: block;
+            width: 180px;
+            border-bottom: 1px solid #ccc; } }
+      @media (min-width: 768px) {
+        .nav li ul.sub-menu li:last-child a,
+        .nav li ul.children li:last-child a {
+          /* TABLET */
+          border-bottom: 0; } }
+      @media (min-width: 768px) {
+        .nav li ul.sub-menu li ul,
+        .nav li ul.children li ul {
+          /* TABLET */
+          top: 0;
+          left: 100%; } }
+    @media (min-width: 768px) {
+      .nav li:hover > ul {
+        /* TABLET */
+        top: auto;
+        visibility: visible; } }
+
+/* end .nav */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Headings
+
+******************************************************************/
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  text-rendering: optimizelegibility;
+  font-weight: 500;
+  /*
+  if you're going to use webfonts, be sure to check your weights
+  http://css-tricks.com/watch-your-font-weight/
+  */
+  /* removing text decoration from all headline links */ }
+  h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
+    text-decoration: none; }
+
+h1, .h1 {
+  font-size: 2.5em;
+  line-height: 1.333em; }
+
+h2, .h2 {
+  font-size: 1.75em;
+  line-height: 1.4em;
+  margin-bottom: 0.375em; }
+
+h3, .h3 {
+  font-size: 1.5em; }
+
+h4, .h4 {
+  font-size: 1.25em;
+  font-weight: 700; }
+
+h5, .h5 {
+  font-size: 0.875em;
+  line-height: 2.09em;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+
+h6, .h6 {
+  font-size: 0.75em;
+  line-height: 2.09em;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Comments
+
+******************************************************************/
 /******************************************************************
 COMMENT STYLES
 ******************************************************************/
@@ -1647,7 +2273,7 @@ COMMENT STYLES
     margin-left: 7px;
     padding: 7px; }
   .comment.odd {
-    background-color: white; }
+    background-color: #fff; }
   .comment.even {
     background: #f8f9fa; }
 
@@ -1716,20 +2342,13 @@ COMMENT FORM STYLES
 .nocomments {
   margin: 0 20px 1.1em; }
 
-/*********************
-SIDEBARS & ASIDES
-*********************/
-.widget ul li {
-  /* deep nesting */ }
+/******************************************************************
+Site Name:
+Author:
 
-.no-widgets {
-  background-color: white;
-  padding: 1.5em;
-  text-align: center;
-  border: 1px solid #cccccc;
-  border-radius: 2px;
-  margin-bottom: 1.5em; }
+Stylesheet: Footer
 
+******************************************************************/
 /*********************
 FOOTER STYLES
 *********************/
@@ -1748,307 +2367,22 @@ override these styles for the desktop
 view.
 */
 /* end .footer-links */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: WooCommerce
+
+******************************************************************/
 /*********************
-LARGER MOBILE DEVICES
-This is for devices like the Galaxy Note or something that's
-larger than an iPhone but smaller than a tablet. Let's call them
-tweeners.
+WOOCOMMERCE STYLES
 *********************/
-@media only screen and (min-width: 481px) {
-  /******************************************************************
-  Site Name:
-  Author:
-  
-  Stylesheet: 481px and Up Stylesheet
-  
-  This stylesheet is loaded for larger devices. It's set to
-  481px because at 480px it would load on a landscaped iPhone.
-  This isn't ideal because then you would be loading all those
-  extra styles on that same mobile connection.
-  
-  A word of warning. This size COULD be a larger mobile device,
-  so you still want to keep it pretty light and simply expand
-  upon your base.scss styles.
-  
-  ******************************************************************/
-  /*
-  IMPORTANT NOTE ABOUT SASS 3.3 & UP
-  You can't use @extend within media queries
-  anymore, so just be aware that if you drop
-  them in here, they won't work.
-  */
-  /*********************
-  NAVIGATION STYLES
-  *********************/
-  /* .menu is clearfixed inside mixins.scss */
-  .menu {
-    /* end .menu ul */ }
-    .menu ul {
-      /* end .menu ul li */
-      /* highlight current page */
-      /* end current highlighters */ }
-      .menu ul li {
-        /*
-        plan your menus and drop-downs wisely.
-        */ }
-        .menu ul li a {
-          /*
-          you can use hover styles here even though this size
-          has the possibility of being a mobile device.
-          */ }
+#store_template {
+  background-color: #fff;
+  margin-top: 1.5em;
+  border-radius: 5px;
+  border: 1px solid #CCC; }
 
-  /* end .menu */
-  /*********************
-  POSTS & CONTENT STYLES
-  *********************/
-  /* entry content */
-  .entry-content {
-    /* at this larger size, we can start to align images */ }
-    .entry-content .alignleft, .entry-content img.alignleft {
-      margin-right: 1.5em;
-      display: inline;
-      float: left; }
-    .entry-content .alignright, .entry-content img.alignright {
-      margin-left: 1.5em;
-      display: inline;
-      float: right; }
-    .entry-content .aligncenter, .entry-content img.aligncenter {
-      margin-right: auto;
-      margin-left: auto;
-      display: block;
-      clear: both; }
-
-  /* end .entry-content */
-  /*********************
-  FOOTER STYLES
-  *********************/
-  /*
-  check your menus here. do they look good?
-  do they need tweaking?
-  */
-  /* end .footer-links */ }
-/*********************
-TABLET & SMALLER LAPTOPS
-This is the average viewing window. So Desktops, Laptops, and
-in general anyone not viewing on a mobile device. Here's where
-you can add resource intensive styles.
-*********************/
-@media only screen and (min-width: 768px) {
-  /******************************************************************
-  Site Name:
-  Author:
-  
-  Stylesheet: Tablet & Small Desktop Stylesheet
-  
-  Here's where you can start getting into the good stuff.
-  This size will work on iPads, other tablets, and desktops.
-  So you can start working with more styles, background images,
-  and other resources. You'll also notice the grid starts to
-  come into play. Have fun!
-  
-  ******************************************************************/
-  /*********************
-  GENERAL STYLES
-  *********************/
-  /*********************
-  LAYOUT & GRID STYLES
-  *********************/
-  .wrap {
-    width: 760px; }
-
-  /*********************
-  HEADER STYLES
-  *********************/
-  /*********************
-  NAVIGATION STYLES
-  *********************/
-  .nav {
-    border: 0;
-    /* end .menu ul li */
-    /* highlight current page */
-    /* end current highlighters */ }
-    .nav ul {
-      background: #323944;
-      margin-top: 0; }
-    .nav li {
-      float: left;
-      position: relative;
-      /*
-      plan your menus and drop-downs wisely.
-      */
-      /* showing sub-menus */ }
-      .nav li a {
-        border-bottom: 0;
-        /*
-        you can use hover styles here even though this size
-        has the possibility of being a mobile device.
-        */ }
-        .nav li a:hover, .nav li a:focus {
-          color: white;
-          text-decoration: underline; }
-      .nav li ul.sub-menu,
-      .nav li ul.children {
-        margin-top: 0;
-        border: 1px solid #ccc;
-        border-top: 0;
-        position: absolute;
-        visibility: hidden;
-        z-index: 8999;
-        /* highlight sub-menu current page */ }
-        .nav li ul.sub-menu li,
-        .nav li ul.children li {
-          /*
-          if you need to go deeper, go nuts
-          just remember deeper menus suck
-          for usability. k, bai.
-          */ }
-          .nav li ul.sub-menu li a,
-          .nav li ul.children li a {
-            padding-left: 10px;
-            border-right: 0;
-            display: block;
-            width: 180px;
-            border-bottom: 1px solid #ccc; }
-          .nav li ul.sub-menu li:last-child a,
-          .nav li ul.children li:last-child a {
-            border-bottom: 0; }
-          .nav li ul.sub-menu li ul,
-          .nav li ul.children li ul {
-            top: 0;
-            left: 100%; }
-      .nav li:hover > ul {
-        top: auto;
-        visibility: visible; }
-
-  /* end .nav */
-  /*********************
-  SIDEBARS & ASIDES
-  *********************/
-  .sidebar {
-    margin-top: 2.2em; }
-
-  .widgettitle {
-    border-bottom: 2px solid #444;
-    margin-bottom: 0.75em; }
-
-  .widget {
-    padding: 0 10px;
-    margin: 2.2em 0; }
-    .widget ul li {
-      margin-bottom: 0.75em;
-      /* deep nesting */ }
-      .widget ul li ul {
-        margin-top: 0.75em;
-        padding-left: 1em; }
-
-  /* links widget */
-  /* meta widget */
-  /* pages widget */
-  /* recent-posts widget */
-  /* archives widget */
-  /* tag-cloud widget */
-  /* calendar widget */
-  /* category widget */
-  /* recent-comments widget */
-  /* search widget */
-  /* text widget */
-  /*********************
-  FOOTER STYLES
-  *********************/
-  /*
-  you'll probably need to do quite a bit
-  of overriding here if you styled them for
-  mobile. Make sure to double check these!
-  */
-  .footer-links ul li {
-    /*
-    be careful with the depth of your menus.
-    it's very rare to have multi-depth menus in
-    the footer.
-    */ }
-
-  /* end .footer-links */ }
-/*********************
-DESKTOP
-This is the average viewing window. So Desktops, Laptops, and
-in general anyone not viewing on a mobile device. Here's where
-you can add resource intensive styles.
-*********************/
-@media only screen and (min-width: 1030px) {
-  /******************************************************************
-  Site Name:
-  Author:
-  
-  Stylesheet: Desktop Stylsheet
-  
-  This is the desktop size. It's larger than an iPad so it will only
-  be seen on the Desktop.
-  
-  ******************************************************************/
-  .wrap {
-    width: 1040px; } }
-/*********************
-LARGE VIEWING SIZE
-This is for the larger monitors and possibly full screen viewers.
-*********************/
-@media only screen and (min-width: 1240px) {
-  /******************************************************************
-  Site Name: 
-  Author: 
-  
-  Stylesheet: Super Large Monitor Stylesheet
-  
-  You can add some advanced styles here if you like. This kicks in
-  on larger screens.
-  
-  ******************************************************************/ }
-/*********************
-RETINA (2x RESOLUTION DEVICES)
-This applies to the retina iPhone (4s) and iPad (2,3) along with
-other displays with a 2x resolution. You can also create a media
-query for retina AND a certain size if you want. Go Nuts.
-*********************/
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  /******************************************************************
-  Site Name: 
-  Author: 
-  
-  Stylesheet: Retina Screens & Devices Stylesheet
-  
-  When handling retina screens you need to make adjustments, especially
-  if you're not using font icons. Here you can add them in one neat
-  place.
-  
-  ******************************************************************/
-  /* 
-  
-  EXAMPLE 
-  Let's say you have an image and you need to make sure it looks ok
-  on retina screens. Let's say we have an icon which dimension are
-  24px x 24px. In your regular stylesheets, it would look something
-  like this:
-  
-  .icon {
-  	width: 24px;
-  	height: 24px;
-  	background: url(img/test.png) no-repeat;
-  }
-  
-  For retina screens, we have to make some adjustments, so that image
-  doesn't look blurry. So, taking into account the image above and the
-  dimensions, this is what we would put in our retina stylesheet:
-  
-  .icon {
-  	background: url(img/test@2x.png) no-repeat;
-  	background-size: 24px 24px;
-  }
-  
-  So, you would create the same icon, but at double the resolution, meaning 
-  it would be 48px x 48px. You'd name it the same, but with a @2x at the end
-  (this is pretty standard practice). Set the background image so it matches
-  the original dimensions and you are good to go. 
-  
-  */ }
 /*********************
 PRINT STYLESHEET
 Feel free to customize this. Remember to add things that won't make
